@@ -1,56 +1,76 @@
-# Soluções em JavaScript - Exercícios de Programação
+# Soluções de Exercícios de Programação
 
-Este repositório contém soluções para diversos exercícios de programação em JavaScript. Os problemas abordam diferentes conceitos, como manipulação de strings, cálculos matemáticos e interação com o usuário.
+Este repositório contém soluções para uma série de problemas de programação em diferentes áreas, como manipulação de strings, cálculos matemáticos e análise de dados. A seguir, estão descritos os problemas e as respectivas soluções implementadas em **JavaScript**.
 
 ## Exercícios Resolvidos
 
-### 1. **Inverter os caracteres de uma string**
-   **Objetivo**: Inverter os caracteres de uma string informada pelo usuário.
+### 1. **Soma dos Números de 1 até um Valor Definido**
+   **Objetivo**: Calcular a soma dos números de 1 até um valor informado (no exemplo, o valor é 13).
 
-   - **Descrição**: O programa recebe uma string e inverte os caracteres, retornando a string invertida.
-   - **Como testar**: Execute o código e informe uma string para inverter.
+   - **Descrição**: O programa utiliza um laço `while` para somar os números de 1 até o valor de 13 e imprime o resultado da soma.
+   - **Como testar**: Execute o código e o valor da variável `SOMA` será impresso no terminal após o cálculo.
+
+   **Código**: `somaValores.js`
 
    **Exemplo**:
-   - Entrada: `JavaScript`
-   - Saída: `tpircSavaJ`
-
-   **Código**: `inverterString.js`
+   - Saída:
+     ```txt
+     Soma dos números de 1 até 13: 91
+     ```
 
 ### 2. **Sequência de Fibonacci**
-   **Objetivo**: Calcular a sequência de Fibonacci até o número informado pelo usuário e verificar se esse número pertence à sequência.
+   **Objetivo**: Calcular a sequência de Fibonacci até o número informado e verificar se o número pertence à sequência.
 
-   - **Descrição**: O programa gera a sequência de Fibonacci até o número informado e verifica se ele está presente na sequência.
-   - **Como testar**: Execute o código e informe um número para calcular a sequência de Fibonacci e verificar se o número pertence à sequência.
+   - **Descrição**: O programa gera a sequência de Fibonacci até o número informado e verifica se o número está presente nela.
+   - **Como testar**: Informe um número e o programa calculará a sequência até esse número, retornando uma mensagem indicando se ele pertence à sequência.
 
-   **Exemplo**:
-   - Entrada: `21`
-   - Saída: `21 pertence à sequência de Fibonacci`
-
-   **Código**: `fibonacci.js`
-
-### 3. **Faturamento Mensal**
-   **Objetivo**: Analisar os dados de faturamento mensal, calculando o menor valor, o maior valor e o número de dias em que o faturamento diário foi superior à média mensal.
-
-   - **Descrição**: O programa analisa um vetor de faturamento diário, encontrando o menor e maior valor de faturamento e o número de dias com faturamento acima da média mensal.
-   - **Como testar**: Execute o código e forneça os dados de faturamento diário no formato adequado.
+   **Código**: `calcularFibonacci.js`
 
    **Exemplo**:
-   - Entrada: `[500, 300, 700, 200, 900]`
+   - Entrada: `13`
+   - Saída: 
+     ```txt
+     13 pertence à sequência de Fibonacci
+     ```
+
+### 3. **Análise de Faturamento Diário**
+   **Objetivo**: Analisar os valores de faturamento diário de uma distribuidora, encontrando o menor valor, o maior valor e o número de dias em que o faturamento foi superior à média mensal.
+
+   - **Descrição**: O programa processa os dados de faturamento diário de uma distribuidora, ignora os dias sem faturamento e calcula:
+     - O menor e maior valor de faturamento.
+     - O número de dias com faturamento acima da média.
+   - **Como testar**: Execute o código após carregar os dados de faturamento no formato JSON ou XML.
+
+   **Código**: `faturamentoDiario.js`
+
+   **Exemplo**:
+   - Dados de entrada (JSON):
+     ```json
+     {
+       "dias": [
+         {"dia": "2021-01-01", "faturamento": 500},
+         {"dia": "2021-01-02", "faturamento": 700},
+         {"dia": "2021-01-03", "faturamento": 800}
+       ]
+     }
+     ```
    - Saída:
-     - Menor valor: `200`
-     - Maior valor: `900`
-     - Dias com faturamento acima da média: `3`
+     ```txt
+     Menor faturamento: 500
+     Maior faturamento: 800
+     Dias com faturamento acima da média: 2
+     ```
 
-   **Código**: `faturamento.js`
+### 4. **Cálculo de Percentual de Representação por Estado**
+   **Objetivo**: Calcular o percentual de representação de cada estado dentro do valor total mensal de faturamento de uma distribuidora.
 
-### 4. **Percentual de Representação de Estados**
-   **Objetivo**: Calcular o percentual de representação de cada estado dentro do faturamento mensal de uma distribuidora.
+   - **Descrição**: O programa calcula o percentual de faturamento de cada estado com base nos dados fornecidos.
+   - **Como testar**: Execute o código para calcular e exibir os percentuais de cada estado.
 
-   - **Descrição**: O programa calcula e exibe o percentual de representação de cada estado no faturamento total.
-   - **Como testar**: Execute o código para calcular os percentuais a partir dos dados fornecidos no problema.
+   **Código**: `percentualEstados.js`
 
    **Exemplo**:
-   - Entrada: 
+   - Dados de entrada (JSON):
      ```json
      {
        "SP": 67836.43,
@@ -61,15 +81,30 @@ Este repositório contém soluções para diversos exercícios de programação 
      }
      ```
    - Saída:
-     - `SP: 42.3%`
-     - `RJ: 23.5%`
-     - `MG: 18.2%`
-     - `ES: 16.5%`
-     - `Outros: 11.5%`
+     ```txt
+     Percentual de SP: 42.3%
+     Percentual de RJ: 23.5%
+     Percentual de MG: 18.2%
+     Percentual de ES: 16.5%
+     Percentual de Outros: 11.5%
+     ```
 
-   **Código**: `percentualEstados.js`
+### 5. **Inverter os Caracteres de uma String**
+   **Objetivo**: Inverter os caracteres de uma string informada.
 
-## Como Executar os Códigos
+   - **Descrição**: O programa inverte os caracteres de uma string e imprime o resultado. Não é permitido o uso de funções prontas como `reverse()`.
+   - **Como testar**: Informe uma string e o programa irá retornar a string com seus caracteres invertidos.
+
+   **Código**: `inverterString.js`
+
+   **Exemplo**:
+   - Entrada: `JavaScript`
+   - Saída:
+     ```txt
+     tpircSavaJ
+     ```
+
+## Como Executar
 
 ### Pré-requisitos
 
